@@ -1,0 +1,47 @@
+
+html {
+    height: 100%;
+}
+
+:root {
+    height: 100%;
+    --navBarColor: #8963d4;
+}
+
+a {
+    color: #0366d6;
+}
+
+code {
+    color: #E01A76;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to bottom, #d4c6f1 1%, white)
+}
+
+.page-bg {
+    height: 100%;
+}
+
+.flowers {
+    display: flex;
+/*    height: 50%;*/
+    flex-direction: row;
+    align-items: flex-end;
+    align-content: flex-end;
+    justify-content: space-between;
+}
+
+.flower {
+    width: 25%;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
