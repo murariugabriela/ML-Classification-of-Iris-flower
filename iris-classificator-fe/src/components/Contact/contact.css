@@ -1,0 +1,13 @@
+.userContact {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: row;
+    align-items: flex-start;
+    align-content: center;
+}
+
+.contactForm{
+    display: flex;
+    flex-direction: column;
+}

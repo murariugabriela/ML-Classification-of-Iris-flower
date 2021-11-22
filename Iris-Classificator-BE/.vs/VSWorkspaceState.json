@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Application",
+    "\\Persistence",
+    "\\WebAPI",
+    "\\WebAPI\\Controllers",
+    "\\WebAPI\\Controllers\\v1"
+  ],
+  "SelectedNode": "\\Iris-Classificator-BE.sln",
+  "PreviewInSolutionExplorer": false
+}

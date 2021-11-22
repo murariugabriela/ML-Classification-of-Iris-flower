@@ -1,0 +1,74 @@
+
+html {
+    height: 100%;
+}
+
+:root {
+    height: 100%;
+    --navBarColor: #8963d4;
+}
+
+a {
+    color: #0366d6;
+}
+
+code {
+    color: #E01A76;
+}
+
+.css-16lloyr-MuiBottomNavigation-root {
+    height: 70px !important;
+    background-color: var(--navBarColor) !important;
+}
+
+.css-1ee5err-MuiButtonBase-root-MuiBottomNavigationAction-root {
+    color: white !important;
+}
+
+.css-1ee5err-MuiButtonBase-root-MuiBottomNavigationAction-root.Mui-selected {
+    color: #d4c6f1 !important;
+}
+
+.css-16lloyr-MuiBottomNavigation-root {
+    justify-content: space-evenly !important;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to bottom, #d4c6f1 1%, white)
+}
+
+.page-bg {
+    height: 100%;
+}
+
+.pageLayout{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.flowers {
+    display: flex;
+/*    height: 50%;*/
+    flex-direction: row;
+    align-items: flex-end;
+    align-content: flex-end;
+    justify-content: space-between;
+}
+
+.flower {
+    width: 25%;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}

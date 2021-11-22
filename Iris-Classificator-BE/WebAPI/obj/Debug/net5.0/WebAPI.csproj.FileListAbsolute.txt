@@ -1,0 +1,7 @@
+C:\Users\Gabi\Desktop\Iris-classificator\Iris-Classificator-BE\WebAPI\obj\Debug\net5.0\WebAPI.csproj.AssemblyReference.cache
+C:\Users\Gabi\Desktop\Iris-classificator\Iris-Classificator-BE\WebAPI\obj\Debug\net5.0\WebAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gabi\Desktop\Iris-classificator\Iris-Classificator-BE\WebAPI\obj\Debug\net5.0\WebAPI.AssemblyInfoInputs.cache
+C:\Users\Gabi\Desktop\Iris-classificator\Iris-Classificator-BE\WebAPI\obj\Debug\net5.0\WebAPI.AssemblyInfo.cs
+C:\Users\Gabi\Desktop\Iris-classificator\Iris-Classificator-BE\WebAPI\obj\Debug\net5.0\WebAPI.csproj.CoreCompileInputs.cache
+C:\Users\Gabi\Desktop\Iris-classificator\Iris-Classificator-BE\WebAPI\obj\Debug\net5.0\WebAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Gabi\Desktop\Iris-classificator\Iris-Classificator-BE\WebAPI\obj\Debug\net5.0\WebAPI.MvcApplicationPartsAssemblyInfo.cache
