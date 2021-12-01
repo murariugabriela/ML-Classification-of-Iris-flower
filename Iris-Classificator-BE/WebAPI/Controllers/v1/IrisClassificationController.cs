@@ -11,6 +11,7 @@ namespace WebAPI.Controllers.v1
         public IrisClassificationController(IMediator mediator) : base(mediator)
         {
         }
+
         [HttpPost]
         public async Task<IActionResult> Classify([FromBody] ClassificateFlowerCommand command)
         {

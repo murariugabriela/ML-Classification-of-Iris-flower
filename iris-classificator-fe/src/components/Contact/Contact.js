@@ -32,13 +32,48 @@ export default function Contact() {
         {label: 'Ursachi Gabriela', email: "gabriela.ursachi@info.uaic.ro"},
         {label: 'Zet Teodor', email: "teodor.zet@info.uaic.ro"},
     ];
-    const [value, setValue] = React.useState('one');
+    const [value, setValue] = React.useState('1');
     const [email, setEmail] = React.useState('');
     const [messageBody, setMessageBody] = React.useState('');
     const [senderEmail, setSenderEmail] = React.useState("");
+    const [client, setClient] = React.useState('');
+    const [response, setResponse] = React.useState('');
+    const [fieldEmail, setFieldEmail] = React.useState(false);
+    const [fieldName, setFieldName] = React.useState(false);
+    const [fieldMessage, setFieldMessage] = React.useState(false);
+
+
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
+    const handleSubmit =  (e) => {
+            e.preventDefault();
+            
+            if (!fieldEmail && !fieldName && !fieldMessage){
+                const requestOptions = {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': "*/*"
+                    },
+                    body: JSON.stringify({
+                        to: email,
+                        from: senderEmail,
+                        name: client,
+                        message: messageBody
+                    }),
+                };
+
+                fetch('http://localhost:5287/api/1.0/Contact', requestOptions)
+                    .then(response => response.json())
+                    .then(data => {console.log(data); setResponse(data.message)})
+                    .catch(error => console.log(error));
+            }
+            
+            
+        }
+    
+    
     return (
         <div className={"pageLayout"}>
             <h2>Contact</h2>
@@ -48,6 +83,7 @@ export default function Contact() {
                         disablePortal
                         id={"usersEmails"}
                         options={users}
+                        getOptionLabel={(option) => option.label}
                         onChange={(event, user) => {
                             if (user) {
                                 setEmail(user.email)
@@ -68,13 +104,17 @@ export default function Contact() {
                            readOnly/>
                     <InputComponent height={"40px"} type={"email"} id={"from"} value={senderEmail}
                                     setValue={setSenderEmail}
-                                    label={"Your Email"} readOnly={"False"}/>
+                                    label={"Your Email"} readOnly={"False"} error = {fieldEmail} setError = {setFieldEmail}/>
+
+                    <InputComponent height={"40px"} type={"text"} id={"name"} value={client}
+                                    setValue={setClient}
+                                    label={"Your Name"} readOnly={"False"}
+                                    error = {fieldName} setError = {setFieldName}/>
 
                     <InputComponent height={"80px"} type={"text"} id={"message"} value={messageBody}
-                                    setValue={setMessageBody} label={"Message"} readOnly={"False"}/>
-                    <button style={{height: "30px", backgroundColor: "#c5b2ec", border: "none"}} onClick={(event) => {
-                        event.preventDefault()
-                    }}>
+                                    setValue={setMessageBody} label={"Message"} readOnly={"False"}
+                                    error = {fieldMessage} setError = {setFieldMessage}/>
+                    <button style={{height: "30px", backgroundColor: "#c5b2ec", border: "none"}} onClick={handleSubmit}>
                         Send
                     </button>
                 </form>

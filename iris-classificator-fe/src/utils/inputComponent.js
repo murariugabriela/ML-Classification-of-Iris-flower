@@ -2,39 +2,40 @@
 import {validateEmail} from "./validate";
 
 export default function InputComponent(props) {
-    function onChangeEvent(event) {
+    React.useEffect(() => {
         switch (props.type) {
             case "text":
-                if (event.target.value === "") {
+                if (props.value === "") {
                     console.log("invalid message")
-                    setErrorMessage("You should enter a valid message")
+                    setErrorMessage("This field cannot be empty.")
                     setColor("red")
-                    setError(true)
+                    props.setError(true)
                 } else {
-                    setError(false)
+                    props.setError(false)
                     setErrorMessage("")
                 }
                 break
             case "email":
-                if (!validateEmail.test(event.target.value)) {
+                if (!validateEmail.test(props.value)) {
                     console.log("invalid email")
                     setErrorMessage("You should enter a valid email")
                     setColor("red")
-                    setError(true)
+                    props.setError(true)
                 } else {
-                    setError(false)
+                    props.setError(false)
                     setErrorMessage("")
                 }
                 break
             default:
                 break
         }
+    },[props.value]);
+    function onChangeEvent(event) {
         props.setValue(event.target.value);
     }
 
     const [color, setColor] = React.useState("green")
     const [errorMessage, setErrorMessage] = React.useState("")
-    const [error, setError] = React.useState(false)
     return (
         <div style={{
             width: "100%",
@@ -56,7 +57,7 @@ export default function InputComponent(props) {
                 onChange={onChangeEvent}
                 required
             />}
-            {props.type === "text" &&
+            {props.type === "text" && props.label === "Message" &&
             <textarea
                 style={{height: props.height, padding: "5px", backgroundColor: "transparent", border: "2px solid #e4dbf6"}}
                 id={props.id}
@@ -64,7 +65,16 @@ export default function InputComponent(props) {
                 onChange={onChangeEvent}
                 required
             />}
-            {error && <p style={{color: color,}}>{errorMessage}</p>}
+            {props.type === "text" && props.label !== "Message" &&
+                <input
+                style={{height: props.height, padding: "5px", backgroundColor: "transparent", border: "2px solid #d5c7f1"}}
+                type={props.type}
+                id={props.id}
+                value={props.value}
+                onChange={onChangeEvent}
+                required
+                />}
+            {props.error && <p style={{color: color,}}>{errorMessage}</p>}
         </div>
 
     );

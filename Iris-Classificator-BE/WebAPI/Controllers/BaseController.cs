@@ -8,7 +8,6 @@ namespace WebAPI.Controllers
     public class BaseController : ControllerBase
     {
         protected IMediator mediator;
-
         public BaseController(IMediator mediator)
         {
             this.mediator = mediator;

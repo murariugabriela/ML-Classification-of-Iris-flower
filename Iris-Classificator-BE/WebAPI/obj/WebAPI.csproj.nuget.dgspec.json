@@ -1,25 +1,19 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gabi\\Desktop\\Iris-classificator\\Iris-Classificator-BE\\WebAPI\\WebAPI.csproj": {}
+    "C:\\Users\\eu\\Desktop\\NET\\ML-Classification-of-Iris-flower-main\\Iris-Classificator-BE\\WebAPI\\WebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gabi\\Desktop\\Iris-classificator\\Iris-Classificator-BE\\Application\\Application.csproj": {
-      "version": "1.0.0",
+    "C:\\Users\\eu\\Desktop\\NET\\ML-Classification-of-Iris-flower-main\\Iris-Classificator-BE\\Application\\Application.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gabi\\Desktop\\Iris-classificator\\Iris-Classificator-BE\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\eu\\Desktop\\NET\\ML-Classification-of-Iris-flower-main\\Iris-Classificator-BE\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\Gabi\\Desktop\\Iris-classificator\\Iris-Classificator-BE\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\Gabi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gabi\\Desktop\\Iris-classificator\\Iris-Classificator-BE\\Application\\obj\\",
+        "projectPath": "C:\\Users\\eu\\Desktop\\NET\\ML-Classification-of-Iris-flower-main\\Iris-Classificator-BE\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\eu\\.nuget\\packages\\",
         "projectStyle": "PackagesConfig",
         "configFilePaths": [
-          "C:\\Users\\Gabi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\eu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net472"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -28,53 +22,23 @@
         "frameworks": {
           "net472": {
             "projectReferences": {
-              "C:\\Users\\Gabi\\Desktop\\Iris-classificator\\Iris-Classificator-BE\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Gabi\\Desktop\\Iris-classificator\\Iris-Classificator-BE\\Domain\\Domain.csproj"
+              "C:\\Users\\eu\\Desktop\\NET\\ML-Classification-of-Iris-flower-main\\Iris-Classificator-BE\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\eu\\Desktop\\NET\\ML-Classification-of-Iris-flower-main\\Iris-Classificator-BE\\Domain\\Domain.csproj"
               }
             }
           }
         },
-        "packagesConfigPath": "C:\\Users\\Gabi\\Desktop\\Iris-classificator\\Iris-Classificator-BE\\Application\\packages.config"
+        "packagesConfigPath": "C:\\Users\\eu\\Desktop\\NET\\ML-Classification-of-Iris-flower-main\\Iris-Classificator-BE\\Application\\packages.config"
       },
       "frameworks": {
         "net472": {}
-      },
-      "runtimes": {
-        "win": {
-          "#import": []
-        },
-        "win-x64": {
-          "#import": []
-        },
-        "win-x86": {
-          "#import": []
-        }
       }
     },
-    "C:\\Users\\Gabi\\Desktop\\Iris-classificator\\Iris-Classificator-BE\\Domain\\Domain.csproj": {
-      "version": "1.0.0",
+    "C:\\Users\\eu\\Desktop\\NET\\ML-Classification-of-Iris-flower-main\\Iris-Classificator-BE\\Domain\\Domain.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gabi\\Desktop\\Iris-classificator\\Iris-Classificator-BE\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\eu\\Desktop\\NET\\ML-Classification-of-Iris-flower-main\\Iris-Classificator-BE\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\Gabi\\Desktop\\Iris-classificator\\Iris-Classificator-BE\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\Gabi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gabi\\Desktop\\Iris-classificator\\Iris-Classificator-BE\\Domain\\obj\\",
-        "skipContentFileWrite": true,
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\Gabi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net472"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
+        "projectPath": "C:\\Users\\eu\\Desktop\\NET\\ML-Classification-of-Iris-flower-main\\Iris-Classificator-BE\\Domain\\Domain.csproj",
         "frameworks": {
           "net472": {
             "projectReferences": {}
@@ -83,35 +47,18 @@
       },
       "frameworks": {
         "net472": {}
-      },
-      "runtimes": {
-        "win": {
-          "#import": []
-        },
-        "win-x64": {
-          "#import": []
-        },
-        "win-x86": {
-          "#import": []
-        }
       }
     },
-    "C:\\Users\\Gabi\\Desktop\\Iris-classificator\\Iris-Classificator-BE\\Persistence\\Persistence.csproj": {
-      "version": "1.0.0",
+    "C:\\Users\\eu\\Desktop\\NET\\ML-Classification-of-Iris-flower-main\\Iris-Classificator-BE\\Persistence\\Persistence.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gabi\\Desktop\\Iris-classificator\\Iris-Classificator-BE\\Persistence\\Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\eu\\Desktop\\NET\\ML-Classification-of-Iris-flower-main\\Iris-Classificator-BE\\Persistence\\Persistence.csproj",
         "projectName": "Persistence",
-        "projectPath": "C:\\Users\\Gabi\\Desktop\\Iris-classificator\\Iris-Classificator-BE\\Persistence\\Persistence.csproj",
-        "packagesPath": "C:\\Users\\Gabi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gabi\\Desktop\\Iris-classificator\\Iris-Classificator-BE\\Persistence\\obj\\",
+        "projectPath": "C:\\Users\\eu\\Desktop\\NET\\ML-Classification-of-Iris-flower-main\\Iris-Classificator-BE\\Persistence\\Persistence.csproj",
+        "packagesPath": "C:\\Users\\eu\\.nuget\\packages\\",
         "projectStyle": "PackagesConfig",
         "configFilePaths": [
-          "C:\\Users\\Gabi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\eu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net472"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -120,44 +67,29 @@
         "frameworks": {
           "net472": {
             "projectReferences": {
-              "C:\\Users\\Gabi\\Desktop\\Iris-classificator\\Iris-Classificator-BE\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\Gabi\\Desktop\\Iris-classificator\\Iris-Classificator-BE\\Application\\Application.csproj"
+              "C:\\Users\\eu\\Desktop\\NET\\ML-Classification-of-Iris-flower-main\\Iris-Classificator-BE\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\eu\\Desktop\\NET\\ML-Classification-of-Iris-flower-main\\Iris-Classificator-BE\\Application\\Application.csproj"
               }
             }
           }
         },
-        "packagesConfigPath": "C:\\Users\\Gabi\\Desktop\\Iris-classificator\\Iris-Classificator-BE\\Persistence\\packages.config"
+        "packagesConfigPath": "C:\\Users\\eu\\Desktop\\NET\\ML-Classification-of-Iris-flower-main\\Iris-Classificator-BE\\Persistence\\packages.config"
       },
       "frameworks": {
         "net472": {}
-      },
-      "runtimes": {
-        "win": {
-          "#import": []
-        },
-        "win-x64": {
-          "#import": []
-        },
-        "win-x86": {
-          "#import": []
-        }
       }
     },
-    "C:\\Users\\Gabi\\Desktop\\Iris-classificator\\Iris-Classificator-BE\\WebAPI\\WebAPI.csproj": {
+    "C:\\Users\\eu\\Desktop\\NET\\ML-Classification-of-Iris-flower-main\\Iris-Classificator-BE\\WebAPI\\WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gabi\\Desktop\\Iris-classificator\\Iris-Classificator-BE\\WebAPI\\WebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\eu\\Desktop\\NET\\ML-Classification-of-Iris-flower-main\\Iris-Classificator-BE\\WebAPI\\WebAPI.csproj",
         "projectName": "WebAPI",
-        "projectPath": "C:\\Users\\Gabi\\Desktop\\Iris-classificator\\Iris-Classificator-BE\\WebAPI\\WebAPI.csproj",
-        "packagesPath": "C:\\Users\\Gabi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gabi\\Desktop\\Iris-classificator\\Iris-Classificator-BE\\WebAPI\\obj\\",
+        "projectPath": "C:\\Users\\eu\\Desktop\\NET\\ML-Classification-of-Iris-flower-main\\Iris-Classificator-BE\\WebAPI\\WebAPI.csproj",
+        "packagesPath": "C:\\Users\\eu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\eu\\Desktop\\NET\\ML-Classification-of-Iris-flower-main\\Iris-Classificator-BE\\WebAPI\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Gabi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\eu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -171,11 +103,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Gabi\\Desktop\\Iris-classificator\\Iris-Classificator-BE\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\Gabi\\Desktop\\Iris-classificator\\Iris-Classificator-BE\\Application\\Application.csproj"
+              "C:\\Users\\eu\\Desktop\\NET\\ML-Classification-of-Iris-flower-main\\Iris-Classificator-BE\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\eu\\Desktop\\NET\\ML-Classification-of-Iris-flower-main\\Iris-Classificator-BE\\Application\\Application.csproj"
               },
-              "C:\\Users\\Gabi\\Desktop\\Iris-classificator\\Iris-Classificator-BE\\Persistence\\Persistence.csproj": {
-                "projectPath": "C:\\Users\\Gabi\\Desktop\\Iris-classificator\\Iris-Classificator-BE\\Persistence\\Persistence.csproj"
+              "C:\\Users\\eu\\Desktop\\NET\\ML-Classification-of-Iris-flower-main\\Iris-Classificator-BE\\Persistence\\Persistence.csproj": {
+                "projectPath": "C:\\Users\\eu\\Desktop\\NET\\ML-Classification-of-Iris-flower-main\\Iris-Classificator-BE\\Persistence\\Persistence.csproj"
               }
             }
           }
@@ -197,6 +129,10 @@
             "Microsoft.AspNetCore.Mvc.Versioning": {
               "target": "Package",
               "version": "[5.0.0, )"
+            },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[3.0.0-preview1, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

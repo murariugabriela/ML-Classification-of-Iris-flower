@@ -42,26 +42,32 @@ export default function Home() {
         },
     ];
     const [response, setResponse] = React.useState();
-    const handleSubmit = (e) => {
+    const [sepalW, setSepalW] = React.useState(0.0);
+    const [sepalH, setSepalH] = React.useState(0.0);
+    const [petalW, setPetalW] = React.useState(0.0);
+    const [petalH, setPetalH] = React.useState(0.0);
+
+    const handleSubmit =  (e) => {
         e.preventDefault();
         const requestOptions = {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
-                'Accept': "*"
+                'Accept': "*/*"
             },
             body: JSON.stringify({
-                sepalWidth: 0.0,
-                sepalHeight: 0.0,
-                petalWidth: 0.0,
-                petalHeight: 0.0
+                sepalWidth: sepalW,
+                sepalHeight: sepalH,
+                petalWidth: petalW,
+                petalHeight: petalH
             }),
         };
         fetch('http://localhost:5287/api/1.0/IrisClassification', requestOptions)
-            .then(response => console.log(response))
-        //.then(data => console.log(data));
+            .then(response => response.json())
+            .then(data => {console.log(data); setResponse(data.message)})
+            .catch(error => console.log(error));
     }
+    
 
     return (
         <div style={{display: "flex", justifyContent: "space-between"}}>
@@ -75,23 +81,23 @@ export default function Home() {
             }}>
                 <h2>Classificator</h2>
                 <h3>Petal width</h3>
-                <Slider marks={marks} defaultValue={0.0} step={0.1} max={8} aria-label="Default"
+                <Slider marks={marks} onChange={(e, val) => {setPetalW(val)}} value = {petalW}  step={0.1} max={8} aria-label="Default"
                         valueLabelDisplay="auto"/>
                 <br/>
                 <h3>Petal height</h3>
 
-                <Slider marks={marks} defaultValue={0.0} step={0.1} max={8} aria-label="Default"
+                <Slider marks={marks} onChange={(e, val) => {setPetalH(val)}} value={petalH}  step={0.1} max={8} aria-label="Default"
                         valueLabelDisplay="auto"/>
                 <br/>
 
                 <h3>Sepal width</h3>
 
-                <Slider marks={marks} defaultValue={0.0} step={0.1} max={8} aria-label="Default"
+                <Slider marks={marks} onChange={(e, val) => {setSepalW(val)}} value={sepalW} step={0.1} max={8} aria-label="Default"
                         valueLabelDisplay="auto"/>
                 <br/>
                 <h3>Sepal heigth</h3>
 
-                <Slider marks={marks} defaultValue={0.0} step={0.1} max={8} aria-label="Default"
+                <Slider marks={marks} onChange={(e, val) => {setSepalH(val)}} value={sepalH} step={0.1} max={8} aria-label="Default"
                         valueLabelDisplay="auto"/>
                 <br/>
                 <button style={{height: "40px", width: "30%", backgroundColor: "#c5b2ec", border: "none"}}
