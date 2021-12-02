@@ -104,16 +104,19 @@ export default function Contact() {
                            readOnly/>
                     <InputComponent height={"40px"} type={"email"} id={"from"} value={senderEmail}
                                     setValue={setSenderEmail}
-                                    label={"Your Email"} readOnly={"False"} error = {fieldEmail} setError = {setFieldEmail}/>
+                                    label={"Your Email"} readOnly={"False"} error = {fieldEmail} setError = {setFieldEmail}
+                                    onChange={handleChange}/>
 
                     <InputComponent height={"40px"} type={"text"} id={"name"} value={client}
                                     setValue={setClient}
                                     label={"Your Name"} readOnly={"False"}
-                                    error = {fieldName} setError = {setFieldName}/>
+                                    error = {fieldName} setError = {setFieldName}
+                                    onChange={handleChange}/>
 
                     <InputComponent height={"80px"} type={"text"} id={"message"} value={messageBody}
                                     setValue={setMessageBody} label={"Message"} readOnly={"False"}
-                                    error = {fieldMessage} setError = {setFieldMessage}/>
+                                    error = {fieldMessage} setError = {setFieldMessage}
+                                    onChange={handleChange}/>
                     <button style={{height: "30px", backgroundColor: "#c5b2ec", border: "none"}} onClick={handleSubmit}>
                         Send
                     </button>
