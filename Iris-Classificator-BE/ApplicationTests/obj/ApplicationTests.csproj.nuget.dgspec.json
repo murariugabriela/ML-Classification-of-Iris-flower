@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gabi\\Desktop\\Iris-classificator\\Iris-Classificator-BE\\ApplicationTests\\ApplicationTests.csproj": {}
+    "C:\\Users\\Gabi\\Desktop\\ML-Classification-of-Iris-flower\\Iris-Classificator-BE\\ApplicationTests\\ApplicationTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gabi\\Desktop\\Iris-classificator\\Iris-Classificator-BE\\ApplicationTests\\ApplicationTests.csproj": {
+    "C:\\Users\\Gabi\\Desktop\\ML-Classification-of-Iris-flower\\Iris-Classificator-BE\\ApplicationTests\\ApplicationTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gabi\\Desktop\\Iris-classificator\\Iris-Classificator-BE\\ApplicationTests\\ApplicationTests.csproj",
+        "projectUniqueName": "C:\\Users\\Gabi\\Desktop\\ML-Classification-of-Iris-flower\\Iris-Classificator-BE\\ApplicationTests\\ApplicationTests.csproj",
         "projectName": "ApplicationTests",
-        "projectPath": "C:\\Users\\Gabi\\Desktop\\Iris-classificator\\Iris-Classificator-BE\\ApplicationTests\\ApplicationTests.csproj",
+        "projectPath": "C:\\Users\\Gabi\\Desktop\\ML-Classification-of-Iris-flower\\Iris-Classificator-BE\\ApplicationTests\\ApplicationTests.csproj",
         "packagesPath": "C:\\Users\\Gabi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gabi\\Desktop\\Iris-classificator\\Iris-Classificator-BE\\ApplicationTests\\obj\\",
+        "outputPath": "C:\\Users\\Gabi\\Desktop\\ML-Classification-of-Iris-flower\\Iris-Classificator-BE\\ApplicationTests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

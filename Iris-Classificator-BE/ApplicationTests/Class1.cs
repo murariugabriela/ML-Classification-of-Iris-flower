@@ -1,5 +1,6 @@
-﻿namespace ApplicationTests;
-
-public class Class1
+﻿namespace ApplicationTests
 {
+    public class Class1
+    {
+    }
 }

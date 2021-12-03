@@ -2,6 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 using Application.Response;
+using Application.Utils;
 
 namespace Application.Features.Commands
 {
@@ -9,7 +10,14 @@ namespace Application.Features.Commands
     {
         public async Task<Message> Handle(ClassificateFlowerCommand request, CancellationToken cancellationToken)
         {
-            return new Message("flower type");
+            IrisClassifier irisClassifier = new IrisClassifier();
+            IrisData irisData = new IrisData();
+            irisData.PetalLength = request.PetalHeight;
+            irisData.PetalWidth = request.PetalWidth;
+            irisData.SepalWidth = request.SepalWidth;
+            irisData.SepalLength = request.SepalHeight;
+            
+            return new Message(irisClassifier.Classify(irisData));
         }
     }
 }

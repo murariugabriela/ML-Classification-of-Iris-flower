@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "Persistence\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{46EF2F03-33C4-4219-A2F0-8AC51BCB1A45}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IrisClassificator.Tests", "IrisClassificator.Tests\IrisClassificator.Tests.csproj", "{74F5F893-0026-40AE-AC53-621913C94EFA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{46EF2F03-33C4-4219-A2F0-8AC51BCB1A45}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46EF2F03-33C4-4219-A2F0-8AC51BCB1A45}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46EF2F03-33C4-4219-A2F0-8AC51BCB1A45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74F5F893-0026-40AE-AC53-621913C94EFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74F5F893-0026-40AE-AC53-621913C94EFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74F5F893-0026-40AE-AC53-621913C94EFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74F5F893-0026-40AE-AC53-621913C94EFA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

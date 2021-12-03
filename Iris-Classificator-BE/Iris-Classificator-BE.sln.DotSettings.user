@@ -1,0 +1,14 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=6509e2fc_002D2ec0_002D4c0e_002Da7da_002D463025b37bcb/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Session" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Nothing /&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=82bcb6a9_002D2a40_002D485b_002Db5e6_002D692cf66b96a6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Given_ContactController_When_SendIsCalled_Then_ShouldReturnA_Message" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::74F5F893-0026-40AE-AC53-621913C94EFA::net6.0::IrisClassificator.Tests.API.v1.ContactControllerTests.Given_ContactController_When_SendIsCalled_Then_ShouldReturnA_Message&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f5c22142_002De290_002D41f8_002Dbc8c_002D280b253e6aa1/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Given_ContactController_When_SendIsCalled_Then_ShouldReturnA_Message #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::74F5F893-0026-40AE-AC53-621913C94EFA::net6.0::IrisClassificator.Tests.API.v1.ContactControllerTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

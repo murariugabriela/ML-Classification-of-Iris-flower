@@ -1,6 +1,7 @@
 import React from 'react';
 import {Slider} from "@mui/material";
 import "./home.css"
+import SnackbarComponent from "../../utils/SnackbarComponent";
 
 export default function Home() {
     const marks = [
@@ -46,8 +47,11 @@ export default function Home() {
     const [sepalH, setSepalH] = React.useState(0.0);
     const [petalW, setPetalW] = React.useState(0.0);
     const [petalH, setPetalH] = React.useState(0.0);
+    const [openAlert, setOpenAlert] = React.useState(false);
+    const [alertMessage, setAlertMessage] = React.useState("");
+    const [alertSeverity, setAlertSeverity] = React.useState("success");
 
-    const handleSubmit =  (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
         const requestOptions = {
             method: 'POST',
@@ -64,10 +68,21 @@ export default function Home() {
         };
         fetch('http://localhost:5287/api/1.0/IrisClassification', requestOptions)
             .then(response => response.json())
-            .then(data => {console.log(data); setResponse(data.message)})
-            .catch(error => console.log(error));
+            .then(data => {
+                setAlertMessage("Successful classification");
+                setAlertSeverity("success");
+                setOpenAlert(true);
+                console.log(data);
+                setResponse(data.message)
+            })
+            .catch(error => {
+                setAlertMessage("Something went wrong");
+                setAlertSeverity("error");
+                setOpenAlert(true);
+                console.log(error)
+            });
     }
-    
+
 
     return (
         <div style={{display: "flex", justifyContent: "space-between"}}>
@@ -81,23 +96,31 @@ export default function Home() {
             }}>
                 <h2>Classificator</h2>
                 <h3>Petal width</h3>
-                <Slider marks={marks} onChange={(e, val) => {setPetalW(val)}} value = {petalW}  step={0.1} max={8} aria-label="Default"
+                <Slider marks={marks} onChange={(e, val) => {
+                    setPetalW(val)
+                }} value={petalW} step={0.1} max={8} aria-label="Default"
                         valueLabelDisplay="auto"/>
                 <br/>
                 <h3>Petal height</h3>
 
-                <Slider marks={marks} onChange={(e, val) => {setPetalH(val)}} value={petalH}  step={0.1} max={8} aria-label="Default"
+                <Slider marks={marks} onChange={(e, val) => {
+                    setPetalH(val)
+                }} value={petalH} step={0.1} max={8} aria-label="Default"
                         valueLabelDisplay="auto"/>
                 <br/>
 
                 <h3>Sepal width</h3>
 
-                <Slider marks={marks} onChange={(e, val) => {setSepalW(val)}} value={sepalW} step={0.1} max={8} aria-label="Default"
+                <Slider marks={marks} onChange={(e, val) => {
+                    setSepalW(val)
+                }} value={sepalW} step={0.1} max={8} aria-label="Default"
                         valueLabelDisplay="auto"/>
                 <br/>
                 <h3>Sepal heigth</h3>
 
-                <Slider marks={marks} onChange={(e, val) => {setSepalH(val)}} value={sepalH} step={0.1} max={8} aria-label="Default"
+                <Slider marks={marks} onChange={(e, val) => {
+                    setSepalH(val)
+                }} value={sepalH} step={0.1} max={8} aria-label="Default"
                         valueLabelDisplay="auto"/>
                 <br/>
                 <button style={{height: "40px", width: "30%", backgroundColor: "#c5b2ec", border: "none"}}
@@ -108,7 +131,7 @@ export default function Home() {
             <div className={"response"}>
                 <div style={{display: "flex", flexDirection: "column"}}>
                     <h3>Iris setosa</h3>
-                    <img id={"iris_setosa"} width={"45%"} style={{opacity: response === "iris_setosa" && "100%"}}
+                    <img id={"iris_setosa"} width={"45%"} style={{opacity: response === "setosa" && "100%"}}
                          src={"/Iris_setosa.jpg"} alt={"Iris setosa"}/>
                 </div>
                 <br/>
@@ -117,17 +140,18 @@ export default function Home() {
                     <div style={{display: "flex", flexDirection: "column"}}>
                         <h3>Iris virginica</h3>
                         <img id={"iris_verginica"} width={"55%"}
-                             style={{opacity: response === "iris_virginica" && "100%"}} src={"/Iris_virginica.jpg"}
+                             style={{opacity: response === "virginica" && "100%"}} src={"/Iris_virginica.jpg"}
                              alt={"Iris virginica"}/>
                     </div>
                     <div style={{display: "flex", flexDirection: "column"}}>
                         <h3>Iris versicolor</h3>
                         <img id="iris_versicolor" width={"90%"}
-                             style={{opacity: response === "iris_versicolor" && "100%"}} src={"/Iris_Versicolor.jpg"}
+                             style={{opacity: response === "versicolor" && "100%"}} src={"/Iris_Versicolor.jpg"}
                              alt={"Iris versicolor"}/>
                     </div>
                 </div>
             </div>
+            <SnackbarComponent message={alertMessage} open={openAlert} setOpen={setOpenAlert} severity={alertSeverity}/>
         </div>
     );
 }

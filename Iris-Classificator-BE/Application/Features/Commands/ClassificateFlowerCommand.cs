@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using System;
 using Application.Response;
+using Microsoft.ML.Data;
 
 namespace Application.Features.Commands
 {

@@ -1,37 +1,42 @@
 ﻿import React from 'react';
 import {validateEmail} from "./validate";
 
-export default function  InputComponent(props) {
+export default function InputComponent(props) {
     // console.log(schema.contactModel)
     const isInitialMount = React.useRef(true);
     React.useEffect(() => {
-        if (isInitialMount.current) {
-            isInitialMount.current = false;
-        } else {
-            switch (props.type) {
-                case "text":
-                    if (props.value === "") {
+        switch (props.type) {
+            case "text":
+                if (props.value === "") {
+                    if (isInitialMount.current) {
+                        isInitialMount.current = false;
+                    }
+                    else{
                         setErrorMessage("This field cannot be empty.")
-                        setColor("red")
-                        props.setError(true)
-                    } else {
-                        props.setError(false)
-                        setErrorMessage("")
                     }
-                    break
-                case "email":
-                    if (!validateEmail.test(props.value)) {
+                    setColor("red")
+                    props.setError(true)
+                } else {
+                    props.setError(false)
+                    setErrorMessage("")
+                }
+                break
+            case "email":
+                if (!validateEmail.test(props.value)) {
+                    if (isInitialMount.current) {
+                        isInitialMount.current = false;
+                    } else {
                         setErrorMessage("You should enter a valid email")
-                        setColor("red")
-                        props.setError(true)
-                    } else {
-                        props.setError(false)
-                        setErrorMessage("")
                     }
-                    break
-                default:
-                    break
-            }
+                    setColor("red")
+                    props.setError(true)
+                } else {
+                    props.setError(false)
+                    setErrorMessage("")
+                }
+                break
+            default:
+                break
         }
     }, [props.value]);
 
@@ -94,7 +99,7 @@ export default function  InputComponent(props) {
                 onChange={onChangeEvent}
                 required
             />}
-            {props.error && <p style={{color: color,}}>{errorMessage}</p>}
+            {props.error && <p id={props.id + "Message"} style={{color: color,}}>{errorMessage}</p>}
         </div>
 
     );
