@@ -16,6 +16,7 @@
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)microsoft.extensions.apidescription.server\3.0.0\build\Microsoft.Extensions.ApiDescription.Server.props" Condition="Exists('$(NuGetPackageRoot)microsoft.extensions.apidescription.server\3.0.0\build\Microsoft.Extensions.ApiDescription.Server.props')" />
     <Import Project="$(NuGetPackageRoot)swashbuckle.aspnetcore\6.2.3\build\Swashbuckle.AspNetCore.props" Condition="Exists('$(NuGetPackageRoot)swashbuckle.aspnetcore\6.2.3\build\Swashbuckle.AspNetCore.props')" />
+    <Import Project="$(NuGetPackageRoot)scisharp.tensorflow.redist\2.6.0\build\netstandard2.0\SciSharp.TensorFlow.Redist.props" Condition="Exists('$(NuGetPackageRoot)scisharp.tensorflow.redist\2.6.0\build\netstandard2.0\SciSharp.TensorFlow.Redist.props')" />
     <Import Project="$(NuGetPackageRoot)microsoft.ml\1.7.0\build\netstandard2.0\Microsoft.ML.props" Condition="Exists('$(NuGetPackageRoot)microsoft.ml\1.7.0\build\netstandard2.0\Microsoft.ML.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">

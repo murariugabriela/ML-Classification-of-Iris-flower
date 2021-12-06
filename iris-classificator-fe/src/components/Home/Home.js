@@ -67,7 +67,7 @@ export default function Home() {
             }),
         };
         fetch('http://localhost:5287/api/1.0/IrisClassification', requestOptions)
-            .then(response => response.json())
+            .then(res => res.json())
             .then(data => {
                 setAlertMessage("Successful classification");
                 setAlertSeverity("success");
@@ -82,51 +82,108 @@ export default function Home() {
                 console.log(error)
             });
     }
+    const handleInputImage = (file) => {
+        if (file.length > 0) {
+            var formData = new FormData();
 
+            formData.append("imagePath", file[0])
+            formData.append("label", file[0]["name"])
+            const requestOptions = {
+                method: 'POST',
+                body: formData,
+            };
+
+            fetch('http://localhost:5287/api/1.0/IrisClassification/Image', requestOptions)
+                .then(res => {
+                    console.log(res.ok)
+                    if (res.ok) {
+                        return res.json()
+                    } else {
+                        setAlertMessage("Something went wrong");
+                        setAlertSeverity("error");
+                        setOpenAlert(true);
+                    }
+                })
+                .then(data => {
+                    console.log(data)
+                    if(data) {
+                        setAlertMessage("Successful classification");
+                        setAlertSeverity("success");
+                        setOpenAlert(true);
+                        setResponse(data.message)
+                    }
+                    
+                })
+                .catch(error => {
+                    setAlertMessage("Something went wrong");
+                    setAlertSeverity("error");
+                    setOpenAlert(true);
+                    console.log(error)
+                });
+        }
+    }
 
     return (
         <div style={{display: "flex", justifyContent: "space-between"}}>
-            <div style={{
+            <div className={"elements_to_predict"} style={{
                 paddingLeft: "30px",
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
                 alignContent: "flex-start",
-                width: "40%"
             }}>
-                <h2>Classificator</h2>
-                <h3>Petal width</h3>
-                <Slider marks={marks} onChange={(e, val) => {
-                    setPetalW(val)
-                }} value={petalW} step={0.1} max={8} aria-label="Default"
-                        valueLabelDisplay="auto"/>
-                <br/>
-                <h3>Petal height</h3>
+                <div style={{
+                    width: "100%"
+                }}>
+                    <h2>Classificator</h2>
+                    <h3>Petal width</h3>
+                    <Slider marks={marks} onChange={(e, val) => {
+                        setPetalW(val)
+                    }} value={petalW} step={0.1} max={8} aria-label="Default"
+                            valueLabelDisplay="auto"/>
+                    <br/>
+                    <h3>Petal height</h3>
 
-                <Slider marks={marks} onChange={(e, val) => {
-                    setPetalH(val)
-                }} value={petalH} step={0.1} max={8} aria-label="Default"
-                        valueLabelDisplay="auto"/>
-                <br/>
+                    <Slider marks={marks} onChange={(e, val) => {
+                        setPetalH(val)
+                    }} value={petalH} step={0.1} max={8} aria-label="Default"
+                            valueLabelDisplay="auto"/>
+                    <br/>
 
-                <h3>Sepal width</h3>
+                    <h3>Sepal width</h3>
 
-                <Slider marks={marks} onChange={(e, val) => {
-                    setSepalW(val)
-                }} value={sepalW} step={0.1} max={8} aria-label="Default"
-                        valueLabelDisplay="auto"/>
-                <br/>
-                <h3>Sepal heigth</h3>
+                    <Slider marks={marks} onChange={(e, val) => {
+                        setSepalW(val)
+                    }} value={sepalW} step={0.1} max={8} aria-label="Default"
+                            valueLabelDisplay="auto"/>
+                    <br/>
+                    <h3>Sepal heigth</h3>
 
-                <Slider marks={marks} onChange={(e, val) => {
-                    setSepalH(val)
-                }} value={sepalH} step={0.1} max={8} aria-label="Default"
-                        valueLabelDisplay="auto"/>
-                <br/>
-                <button style={{height: "40px", width: "30%", backgroundColor: "#c5b2ec", border: "none"}}
-                        onClick={handleSubmit}>
-                    Send
-                </button>
+                    <Slider marks={marks} onChange={(e, val) => {
+                        setSepalH(val)
+                    }} value={sepalH} step={0.1} max={8} aria-label="Default"
+                            valueLabelDisplay="auto"/>
+                    <br/>
+                    <button style={{height: "40px", width: "30%", backgroundColor: "#c5b2ec", border: "none"}}
+                            onClick={handleSubmit}>
+                        Send
+                    </button>
+                </div>
+                <div>
+                    <form className={"image_form"}>
+                        <div style={{display: "flex", flexDirection: "column"}}>
+                            <label htmlFor={"predictImage"}>
+                                <h3>
+                                    Or you can choose a file you want to predict
+                                </h3>
+                            </label>
+                            <input type={"file"} name={"predictImage"} id={"predictImage"} max={1}
+                                   onChange={(e) => handleInputImage(e.target.files)}
+                                    // style={{height: "40px", width: "30%", backgroundColor: "#c5b2ec", border: "none"}}
+                            />
+                        </div>
+                    </form>
+                </div>
             </div>
             <div className={"response"}>
                 <div style={{display: "flex", flexDirection: "column"}}>

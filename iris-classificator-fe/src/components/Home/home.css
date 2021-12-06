@@ -2,7 +2,7 @@
     color: #8963d4 !important;
 }
 
-.response{
+.response {
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -10,7 +10,26 @@
     justify-content: center;
     align-content: center;
 }
-[id^="iris"]
-{
+
+.elements_to_predict {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+input[type=file]::file-selector-button {
+    height: 40px;
+    width: 30%;
+    border: none;
+    padding: .2em .4em;
+    background-color: #c5b2ec;
+    transition: 1s;
+}
+
+input[type=file]::file-selector-button:hover {
+    background-color: #8b7faf;
+}
+
+[id^="iris"] {
     opacity: 40%;
 }

@@ -38,7 +38,6 @@ export default function Contact() {
     const [messageBody, setMessageBody] = React.useState('');
     const [senderEmail, setSenderEmail] = React.useState("");
     const [client, setClient] = React.useState('');
-    const [response, setResponse] = React.useState('');
     const [fieldEmail, setFieldEmail] = React.useState(false);
     const [fieldName, setFieldName] = React.useState(false);
     const [fieldMessage, setFieldMessage] = React.useState(false);
@@ -73,7 +72,6 @@ export default function Contact() {
                     setAlertSeverity("success");
                     setOpenAlert(true);
                     console.log(data);
-                    setResponse(data.message)
                 })
                 .catch(error => {
                     setAlertMessage("Something went wrong");

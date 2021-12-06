@@ -1,8 +1,8 @@
-﻿using MediatR;
-using System.Threading;
+﻿using System.Threading;
 using System.Threading.Tasks;
 using Application.Response;
 using Application.Utils;
+using MediatR;
 
 namespace Application.Features.Commands
 {

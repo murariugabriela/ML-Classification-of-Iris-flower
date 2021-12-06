@@ -5,16 +5,21 @@
   },
   "projects": {
     "C:\\Users\\Gabi\\Desktop\\ML-Classification-of-Iris-flower\\Iris-Classificator-BE\\Application\\Application.csproj": {
+      "version": "1.0.0",
       "restore": {
         "projectUniqueName": "C:\\Users\\Gabi\\Desktop\\ML-Classification-of-Iris-flower\\Iris-Classificator-BE\\Application\\Application.csproj",
         "projectName": "Application",
         "projectPath": "C:\\Users\\Gabi\\Desktop\\ML-Classification-of-Iris-flower\\Iris-Classificator-BE\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\Gabi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Gabi\\Desktop\\ML-Classification-of-Iris-flower\\Iris-Classificator-BE\\Application\\obj\\",
         "projectStyle": "PackagesConfig",
         "configFilePaths": [
           "C:\\Users\\Gabi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -33,19 +38,35 @@
       },
       "frameworks": {
         "net472": {}
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
       }
     },
     "C:\\Users\\Gabi\\Desktop\\ML-Classification-of-Iris-flower\\Iris-Classificator-BE\\Domain\\Domain.csproj": {
+      "version": "1.0.0",
       "restore": {
         "projectUniqueName": "C:\\Users\\Gabi\\Desktop\\ML-Classification-of-Iris-flower\\Iris-Classificator-BE\\Domain\\Domain.csproj",
         "projectName": "Domain",
         "projectPath": "C:\\Users\\Gabi\\Desktop\\ML-Classification-of-Iris-flower\\Iris-Classificator-BE\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\Gabi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Gabi\\Desktop\\ML-Classification-of-Iris-flower\\Iris-Classificator-BE\\Domain\\obj\\",
         "projectStyle": "PackagesConfig",
         "configFilePaths": [
           "C:\\Users\\Gabi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -60,19 +81,35 @@
       },
       "frameworks": {
         "net472": {}
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
       }
     },
     "C:\\Users\\Gabi\\Desktop\\ML-Classification-of-Iris-flower\\Iris-Classificator-BE\\Persistence\\Persistence.csproj": {
+      "version": "1.0.0",
       "restore": {
         "projectUniqueName": "C:\\Users\\Gabi\\Desktop\\ML-Classification-of-Iris-flower\\Iris-Classificator-BE\\Persistence\\Persistence.csproj",
         "projectName": "Persistence",
         "projectPath": "C:\\Users\\Gabi\\Desktop\\ML-Classification-of-Iris-flower\\Iris-Classificator-BE\\Persistence\\Persistence.csproj",
         "packagesPath": "C:\\Users\\Gabi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Gabi\\Desktop\\ML-Classification-of-Iris-flower\\Iris-Classificator-BE\\Persistence\\obj\\",
         "projectStyle": "PackagesConfig",
         "configFilePaths": [
           "C:\\Users\\Gabi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -91,6 +128,17 @@
       },
       "frameworks": {
         "net472": {}
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
       }
     },
     "C:\\Users\\Gabi\\Desktop\\ML-Classification-of-Iris-flower\\Iris-Classificator-BE\\WebAPI\\WebAPI.csproj": {
@@ -152,9 +200,21 @@
               "target": "Package",
               "version": "[1.7.0, )"
             },
+            "Microsoft.ML.ImageAnalytics": {
+              "target": "Package",
+              "version": "[1.7.0, )"
+            },
+            "Microsoft.ML.TensorFlow": {
+              "target": "Package",
+              "version": "[1.7.0, )"
+            },
             "MimeKit": {
               "target": "Package",
               "version": "[3.0.0-preview1, )"
+            },
+            "SciSharp.TensorFlow.Redist": {
+              "target": "Package",
+              "version": "[2.6.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

@@ -1,8 +1,6 @@
 ﻿using System;
 using System.IO;
-using System.Linq;
 using Microsoft.ML;
-using Microsoft.ML.Data;
 
 namespace Application.Utils
 {

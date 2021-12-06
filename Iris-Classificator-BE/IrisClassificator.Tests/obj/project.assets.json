@@ -41,6 +41,18 @@
           "lib/net5.0/FakeItEasy.dll": {}
         }
       },
+      "Google.Protobuf/3.11.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Protobuf.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Protobuf.dll": {}
+        }
+      },
       "MediatR/9.0.0": {
         "type": "package",
         "compile": {
@@ -229,6 +241,35 @@
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.ML.DataView.dll": {}
+        }
+      },
+      "Microsoft.ML.ImageAnalytics/1.7.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.ML": "1.7.0",
+          "System.Buffers": "4.5.0",
+          "System.Drawing.Common": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.ML.ImageAnalytics.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.ML.ImageAnalytics.dll": {}
+        }
+      },
+      "Microsoft.ML.TensorFlow/1.7.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.ML": "1.7.0",
+          "System.IO.FileSystem.AccessControl": "4.5.0",
+          "System.Security.Principal.Windows": "4.5.0",
+          "TensorFlow.NET": "0.20.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.ML.TensorFlow.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.ML.TensorFlow.dll": {}
         }
       },
       "Microsoft.NET.Test.Sdk/16.11.0": {
@@ -524,6 +565,24 @@
           "build/netcoreapp2.1/Microsoft.TestPlatform.TestHost.props": {}
         }
       },
+      "Microsoft.Win32.SystemEvents/4.5.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.0.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp2.0/Microsoft.Win32.SystemEvents.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "MimeKit/3.0.0-preview1": {
         "type": "package",
         "dependencies": {
@@ -594,6 +653,18 @@
           "lib/netstandard2.0/NuGet.Frameworks.dll": {}
         }
       },
+      "NumSharp.Lite/0.1.8": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/NumSharp.Lite.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/NumSharp.Lite.dll": {}
+        }
+      },
       "NUnit/3.13.2": {
         "type": "package",
         "dependencies": {
@@ -624,6 +695,18 @@
           "lib/netstandard2.0/BouncyCastle.Crypto.dll": {}
         }
       },
+      "Protobuf.Text/0.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Google.Protobuf": "3.11.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/Protobuf.Text.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Protobuf.Text.dll": {}
+        }
+      },
       "runtime.native.System/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -635,6 +718,34 @@
         },
         "runtime": {
           "lib/netstandard1.0/_._": {}
+        }
+      },
+      "SciSharp.TensorFlow.Redist/2.6.0": {
+        "type": "package",
+        "build": {
+          "build/netstandard2.0/SciSharp.TensorFlow.Redist.props": {}
+        },
+        "runtimeTargets": {
+          "runtimes/linux-x64/native/libtensorflow.so": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/libtensorflow_framework.so.2": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/osx-x64/native/libtensorflow.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/osx-x64/native/libtensorflow_framework.2.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/win-x64/native/tensorflow.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          }
         }
       },
       "Swashbuckle.AspNetCore/6.2.3": {
@@ -851,6 +962,29 @@
           }
         }
       },
+      "System.Drawing.Common/4.5.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.0.0",
+          "Microsoft.Win32.SystemEvents": "4.5.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Drawing.Common.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Drawing.Common.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netcoreapp2.0/System.Drawing.Common.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netcoreapp2.0/System.Drawing.Common.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "System.Dynamic.Runtime/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -938,6 +1072,25 @@
         },
         "compile": {
           "ref/netstandard1.3/_._": {}
+        }
+      },
+      "System.IO.FileSystem.AccessControl/4.5.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.AccessControl": "4.5.0",
+          "System.Security.Principal.Windows": "4.5.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.IO.FileSystem.AccessControl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.IO.FileSystem.AccessControl.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/System.IO.FileSystem.AccessControl.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
         }
       },
       "System.IO.FileSystem.Primitives/4.3.0": {
@@ -1208,6 +1361,25 @@
           "lib/netstandard1.3/System.Runtime.Serialization.Primitives.dll": {}
         }
       },
+      "System.Security.AccessControl/4.5.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.0.0",
+          "System.Security.Principal.Windows": "4.5.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Security.AccessControl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Security.AccessControl.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "System.Security.Cryptography.Cng/4.7.0": {
         "type": "package",
         "compile": {
@@ -1236,6 +1408,28 @@
         },
         "runtimeTargets": {
           "runtimes/win/lib/netcoreapp3.0/System.Security.Cryptography.Pkcs.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "System.Security.Principal.Windows/4.5.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.0.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Security.Principal.Windows.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Principal.Windows.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netcoreapp2.0/System.Security.Principal.Windows.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netcoreapp2.0/System.Security.Principal.Windows.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -1383,6 +1577,20 @@
           "lib/netstandard1.3/System.Xml.XmlDocument.dll": {}
         }
       },
+      "TensorFlow.NET/0.20.1": {
+        "type": "package",
+        "dependencies": {
+          "Google.Protobuf": "3.11.4",
+          "NumSharp.Lite": "0.1.8",
+          "Protobuf.Text": "0.4.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/TensorFlow.NET.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/TensorFlow.NET.dll": {}
+        }
+      },
       "xunit/2.4.2-pre.12": {
         "type": "package",
         "dependencies": {
@@ -1497,8 +1705,11 @@
           "MediatR": "9.0.0",
           "Microsoft.AspNetCore.Mvc.Versioning": "5.0.0",
           "Microsoft.ML": "1.7.0",
+          "Microsoft.ML.ImageAnalytics": "1.7.0",
+          "Microsoft.ML.TensorFlow": "1.7.0",
           "MimeKit": "3.0.0-preview1",
           "Persistence": "1.0.0",
+          "SciSharp.TensorFlow.Redist": "2.6.0",
           "Swashbuckle.AspNetCore": "6.2.3"
         },
         "compile": {
@@ -1608,6 +1819,26 @@
         "lib/netstandard2.0/FakeItEasy.xml",
         "lib/netstandard2.1/FakeItEasy.dll",
         "lib/netstandard2.1/FakeItEasy.xml"
+      ]
+    },
+    "Google.Protobuf/3.11.4": {
+      "sha512": "dajCxjDCiPyZuqwZCkFJTwhn/0TJ5VesIs4fXvs56ez1VUi68JjhYMMsPjnJ9gcPqJwTMtXMU1WqUdXYiG1x4w==",
+      "type": "package",
+      "path": "google.protobuf/3.11.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "google.protobuf.3.11.4.nupkg.sha512",
+        "google.protobuf.nuspec",
+        "lib/net45/Google.Protobuf.dll",
+        "lib/net45/Google.Protobuf.pdb",
+        "lib/net45/Google.Protobuf.xml",
+        "lib/netstandard1.0/Google.Protobuf.dll",
+        "lib/netstandard1.0/Google.Protobuf.pdb",
+        "lib/netstandard1.0/Google.Protobuf.xml",
+        "lib/netstandard2.0/Google.Protobuf.dll",
+        "lib/netstandard2.0/Google.Protobuf.pdb",
+        "lib/netstandard2.0/Google.Protobuf.xml"
       ]
     },
     "MediatR/9.0.0": {
@@ -1879,6 +2110,38 @@
         "lib/netstandard2.0/Microsoft.ML.DataView.xml",
         "microsoft.ml.dataview.1.7.0.nupkg.sha512",
         "microsoft.ml.dataview.nuspec",
+        "mlnetlogo.png"
+      ]
+    },
+    "Microsoft.ML.ImageAnalytics/1.7.0": {
+      "sha512": "PN6XtPWALxx/H7stVFmUSEgVRVpI4ausZJx2rHabgze40FMMYe9/qeua7hoOcqotFgssJLC1WvC8y6R/iV3f+w==",
+      "type": "package",
+      "path": "microsoft.ml.imageanalytics/1.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netstandard2.0/Microsoft.ML.ImageAnalytics.dll",
+        "lib/netstandard2.0/Microsoft.ML.ImageAnalytics.xml",
+        "microsoft.ml.imageanalytics.1.7.0.nupkg.sha512",
+        "microsoft.ml.imageanalytics.nuspec",
+        "mlnetlogo.png"
+      ]
+    },
+    "Microsoft.ML.TensorFlow/1.7.0": {
+      "sha512": "4FxpMjY+lFGFWrHekNSnLJHz6lairkJbM68Ms8OrCHmFoeqHwgMYJPKx1lmcJzY++mf3ikjtT0BdP9GndEMToQ==",
+      "type": "package",
+      "path": "microsoft.ml.tensorflow/1.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netstandard2.0/Microsoft.ML.TensorFlow.dll",
+        "lib/netstandard2.0/Microsoft.ML.TensorFlow.xml",
+        "microsoft.ml.tensorflow.1.7.0.nupkg.sha512",
+        "microsoft.ml.tensorflow.nuspec",
         "mlnetlogo.png"
       ]
     },
@@ -2431,6 +2694,26 @@
         "microsoft.testplatform.testhost.nuspec"
       ]
     },
+    "Microsoft.Win32.SystemEvents/4.5.0": {
+      "sha512": "LuI1oG+24TUj1ZRQQjM5Ew73BKnZE5NZ/7eAdh1o8ST5dPhUnJvIkiIn2re3MwnkRy6ELRnvEbBxHP8uALKhJw==",
+      "type": "package",
+      "path": "microsoft.win32.systemevents/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Win32.SystemEvents.dll",
+        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll",
+        "microsoft.win32.systemevents.4.5.0.nupkg.sha512",
+        "microsoft.win32.systemevents.nuspec",
+        "ref/net461/Microsoft.Win32.SystemEvents.dll",
+        "ref/netstandard2.0/Microsoft.Win32.SystemEvents.dll",
+        "runtimes/win/lib/netcoreapp2.0/Microsoft.Win32.SystemEvents.dll",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "MimeKit/3.0.0-preview1": {
       "sha512": "SwFn7K6y6eEzLD19B0W64bCdtKrs/2PuLxdOXJTxcrchFCCtfo4PheIUkkqzaLhA4qgxMRuR2jAesJfM5+inMA==",
       "type": "package",
@@ -2659,6 +2942,20 @@
         "nuget.frameworks.nuspec"
       ]
     },
+    "NumSharp.Lite/0.1.8": {
+      "sha512": "8J74SVRjrsid+26pCkRo2A1e0tWIv1R/Qvin7zDVD3Pm1C3lK0XEQXNJ7nk3Qb1jwfNYCRaXBvFJZrj0X7ocTA==",
+      "type": "package",
+      "path": "numsharp.lite/0.1.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "lib/netstandard2.0/NumSharp.Lite.dll",
+        "lib/netstandard2.0/NumSharp.Lite.pdb",
+        "numsharp.lite.0.1.8.nupkg.sha512",
+        "numsharp.lite.nuspec"
+      ]
+    },
     "NUnit/3.13.2": {
       "sha512": "u+fz/lXyR4vlamySNAEMrXvh+GhAQiB6/aVZtU5WjivR5zF26Ui0tfteDtWqT90k9D8y6g8rFKYQC97Z7d195w==",
       "type": "package",
@@ -2723,6 +3020,18 @@
         "portable.bouncycastle.nuspec"
       ]
     },
+    "Protobuf.Text/0.4.0": {
+      "sha512": "fg7139wyR33UUbqJjRR8LppXORUv6FyrX1ngazHyadVmjnRi0UhwReHKbpi5/54h+PcGyue/DoV3k3IKXKhO/A==",
+      "type": "package",
+      "path": "protobuf.text/0.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Protobuf.Text.dll",
+        "protobuf.text.0.4.0.nupkg.sha512",
+        "protobuf.text.nuspec"
+      ]
+    },
     "runtime.native.System/4.3.0": {
       "sha512": "c/qWt2LieNZIj1jGnVNsE2Kl23Ya2aSTBuXMD6V7k9KWr6l16Tqdwq+hJScEpWER9753NWC8h96PaVNY5Ld7Jw==",
       "type": "package",
@@ -2735,6 +3044,25 @@
         "lib/netstandard1.0/_._",
         "runtime.native.system.4.3.0.nupkg.sha512",
         "runtime.native.system.nuspec"
+      ]
+    },
+    "SciSharp.TensorFlow.Redist/2.6.0": {
+      "sha512": "c2a38cAcNffUyWbtxbfM/0XjGujtHWOVoWrO2I2bDLNlMRwAwiBRuqPlbbj09ETlT4IOXgphL/lWt/QNqVUDFw==",
+      "type": "package",
+      "path": "scisharp.tensorflow.redist/2.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "THIRD_PARTY_NOTICES.txt",
+        "build/netstandard2.0/SciSharp.TensorFlow.Redist.props",
+        "runtimes/linux-x64/native/libtensorflow.so",
+        "runtimes/linux-x64/native/libtensorflow_framework.so.2",
+        "runtimes/osx-x64/native/libtensorflow.dylib",
+        "runtimes/osx-x64/native/libtensorflow_framework.2.dylib",
+        "runtimes/win-x64/native/tensorflow.dll",
+        "scisharp.tensorflow.redist.2.6.0.nupkg.sha512",
+        "scisharp.tensorflow.redist.nuspec"
       ]
     },
     "Swashbuckle.AspNetCore/6.2.3": {
@@ -3299,6 +3627,39 @@
         "system.diagnostics.tracesource.nuspec"
       ]
     },
+    "System.Drawing.Common/4.5.0": {
+      "sha512": "AiJFxxVPdeITstiRS5aAu8+8Dpf5NawTMoapZ53Gfirml24p7HIfhjmCRxdXnmmf3IUA3AX3CcW7G73CjWxW/Q==",
+      "type": "package",
+      "path": "system.drawing.common/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.Drawing.Common.dll",
+        "lib/netstandard2.0/System.Drawing.Common.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net461/System.Drawing.Common.dll",
+        "ref/netstandard2.0/System.Drawing.Common.dll",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/unix/lib/netcoreapp2.0/System.Drawing.Common.dll",
+        "runtimes/win/lib/netcoreapp2.0/System.Drawing.Common.dll",
+        "system.drawing.common.4.5.0.nupkg.sha512",
+        "system.drawing.common.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Dynamic.Runtime/4.3.0": {
       "sha512": "SNVi1E/vfWUAs/WYKhE9+qlS6KqK0YVhnlT0HQtr8pMIA8YX3lwy3uPMownDwdYISBdmAF/2holEIldVp85Wag==",
       "type": "package",
@@ -3596,6 +3957,45 @@
         "ref/xamarinwatchos10/_._",
         "system.io.filesystem.4.3.0.nupkg.sha512",
         "system.io.filesystem.nuspec"
+      ]
+    },
+    "System.IO.FileSystem.AccessControl/4.5.0": {
+      "sha512": "TYe6xstoqT5MlTly0OtPU6u9zWuNScLVMEx6sTCjjx+Hqdp0wCXoG6fnzMpTPMQACXQzi9pd2N5Tloow+5jQdQ==",
+      "type": "package",
+      "path": "system.io.filesystem.accesscontrol/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net46/System.IO.FileSystem.AccessControl.dll",
+        "lib/net461/System.IO.FileSystem.AccessControl.dll",
+        "lib/netstandard1.3/System.IO.FileSystem.AccessControl.dll",
+        "lib/netstandard2.0/System.IO.FileSystem.AccessControl.dll",
+        "ref/net46/System.IO.FileSystem.AccessControl.dll",
+        "ref/net461/System.IO.FileSystem.AccessControl.dll",
+        "ref/net461/System.IO.FileSystem.AccessControl.xml",
+        "ref/netstandard1.3/System.IO.FileSystem.AccessControl.dll",
+        "ref/netstandard1.3/System.IO.FileSystem.AccessControl.xml",
+        "ref/netstandard1.3/de/System.IO.FileSystem.AccessControl.xml",
+        "ref/netstandard1.3/es/System.IO.FileSystem.AccessControl.xml",
+        "ref/netstandard1.3/fr/System.IO.FileSystem.AccessControl.xml",
+        "ref/netstandard1.3/it/System.IO.FileSystem.AccessControl.xml",
+        "ref/netstandard1.3/ja/System.IO.FileSystem.AccessControl.xml",
+        "ref/netstandard1.3/ko/System.IO.FileSystem.AccessControl.xml",
+        "ref/netstandard1.3/ru/System.IO.FileSystem.AccessControl.xml",
+        "ref/netstandard1.3/zh-hans/System.IO.FileSystem.AccessControl.xml",
+        "ref/netstandard1.3/zh-hant/System.IO.FileSystem.AccessControl.xml",
+        "ref/netstandard2.0/System.IO.FileSystem.AccessControl.dll",
+        "ref/netstandard2.0/System.IO.FileSystem.AccessControl.xml",
+        "runtimes/win/lib/net46/System.IO.FileSystem.AccessControl.dll",
+        "runtimes/win/lib/net461/System.IO.FileSystem.AccessControl.dll",
+        "runtimes/win/lib/netstandard1.3/System.IO.FileSystem.AccessControl.dll",
+        "runtimes/win/lib/netstandard2.0/System.IO.FileSystem.AccessControl.dll",
+        "system.io.filesystem.accesscontrol.4.5.0.nupkg.sha512",
+        "system.io.filesystem.accesscontrol.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.IO.FileSystem.Primitives/4.3.0": {
@@ -4753,6 +5153,48 @@
         "system.runtime.serialization.primitives.nuspec"
       ]
     },
+    "System.Security.AccessControl/4.5.0": {
+      "sha512": "vW8Eoq0TMyz5vAG/6ce483x/CP83fgm4SJe5P8Tb1tZaobcvPrbMEL7rhH1DRdrYbbb6F0vq3OlzmK0Pkwks5A==",
+      "type": "package",
+      "path": "system.security.accesscontrol/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net46/System.Security.AccessControl.dll",
+        "lib/net461/System.Security.AccessControl.dll",
+        "lib/netstandard1.3/System.Security.AccessControl.dll",
+        "lib/netstandard2.0/System.Security.AccessControl.dll",
+        "lib/uap10.0.16299/_._",
+        "ref/net46/System.Security.AccessControl.dll",
+        "ref/net461/System.Security.AccessControl.dll",
+        "ref/net461/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/System.Security.AccessControl.dll",
+        "ref/netstandard1.3/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/de/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/es/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/fr/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/it/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/ja/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/ko/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/ru/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/zh-hans/System.Security.AccessControl.xml",
+        "ref/netstandard1.3/zh-hant/System.Security.AccessControl.xml",
+        "ref/netstandard2.0/System.Security.AccessControl.dll",
+        "ref/netstandard2.0/System.Security.AccessControl.xml",
+        "ref/uap10.0.16299/_._",
+        "runtimes/win/lib/net46/System.Security.AccessControl.dll",
+        "runtimes/win/lib/net461/System.Security.AccessControl.dll",
+        "runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.dll",
+        "runtimes/win/lib/netstandard1.3/System.Security.AccessControl.dll",
+        "runtimes/win/lib/uap10.0.16299/_._",
+        "system.security.accesscontrol.4.5.0.nupkg.sha512",
+        "system.security.accesscontrol.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Security.Cryptography.Cng/4.7.0": {
       "sha512": "4WQjFuypWtxb/bl/YwEE7LYGn4fgpsikFfBU6xwEm4YBYiRAhXAEJ62lILBu2JJSFbClIAntFTGfDZafn8yZTg==",
       "type": "package",
@@ -4878,6 +5320,49 @@
         "runtimes/win/lib/netstandard2.1/System.Security.Cryptography.Pkcs.xml",
         "system.security.cryptography.pkcs.4.7.0.nupkg.sha512",
         "system.security.cryptography.pkcs.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Security.Principal.Windows/4.5.0": {
+      "sha512": "U77HfRXlZlOeIXd//Yoj6Jnk8AXlbeisf1oq1os+hxOGVnuG+lGSfGqTwTZBoORFF6j/0q7HXIl8cqwQ9aUGqQ==",
+      "type": "package",
+      "path": "system.security.principal.windows/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net46/System.Security.Principal.Windows.dll",
+        "lib/net461/System.Security.Principal.Windows.dll",
+        "lib/netstandard1.3/System.Security.Principal.Windows.dll",
+        "lib/netstandard2.0/System.Security.Principal.Windows.dll",
+        "lib/uap10.0.16299/_._",
+        "ref/net46/System.Security.Principal.Windows.dll",
+        "ref/net461/System.Security.Principal.Windows.dll",
+        "ref/net461/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/System.Security.Principal.Windows.dll",
+        "ref/netstandard1.3/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/de/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/es/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/fr/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/it/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/ja/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/ko/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/ru/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/zh-hans/System.Security.Principal.Windows.xml",
+        "ref/netstandard1.3/zh-hant/System.Security.Principal.Windows.xml",
+        "ref/netstandard2.0/System.Security.Principal.Windows.dll",
+        "ref/netstandard2.0/System.Security.Principal.Windows.xml",
+        "ref/uap10.0.16299/_._",
+        "runtimes/unix/lib/netcoreapp2.0/System.Security.Principal.Windows.dll",
+        "runtimes/win/lib/net46/System.Security.Principal.Windows.dll",
+        "runtimes/win/lib/net461/System.Security.Principal.Windows.dll",
+        "runtimes/win/lib/netcoreapp2.0/System.Security.Principal.Windows.dll",
+        "runtimes/win/lib/netstandard1.3/System.Security.Principal.Windows.dll",
+        "runtimes/win/lib/uap10.0.16299/_._",
+        "system.security.principal.windows.4.5.0.nupkg.sha512",
+        "system.security.principal.windows.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
@@ -5461,6 +5946,20 @@
         "system.xml.xmldocument.nuspec"
       ]
     },
+    "TensorFlow.NET/0.20.1": {
+      "sha512": "8svOVEjS1CV5JDnUUuFKwvbM2q8KSaqUR7rFo3Ht/duACtY58lZS4Q6hwu2GeWm8gRvhJIrNngIrDbsWMbDvyg==",
+      "type": "package",
+      "path": "tensorflow.net/0.20.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "lib/netstandard2.0/TensorFlow.NET.dll",
+        "lib/netstandard2.0/TensorFlow.NET.xml",
+        "tensorflow.net.0.20.1.nupkg.sha512",
+        "tensorflow.net.nuspec"
+      ]
+    },
     "xunit/2.4.2-pre.12": {
       "sha512": "FlZ/r9WdIy8x/0oF9mpWepkspYi+5e9YmKZfkxKFgEI6G8T3GC9mntYVI515FyXzQ584xPMrcv0b9Orx6MXa9g==",
       "type": "package",
@@ -5596,10 +6095,13 @@
       "FakeItEasy >= 7.2.0",
       "MediatR >= 9.0.0",
       "Microsoft.ML >= 1.7.0",
+      "Microsoft.ML.ImageAnalytics >= 1.7.0",
+      "Microsoft.ML.TensorFlow >= 1.7.0",
       "Microsoft.NET.Test.Sdk >= 16.11.0",
       "Moq >= 4.16.1",
       "NUnit >= 3.13.2",
       "NUnit3TestAdapter >= 4.0.0",
+      "SciSharp.TensorFlow.Redist >= 2.6.0",
       "WebAPI >= 1.0.0",
       "coverlet.collector >= 3.1.0",
       "xunit >= 2.4.2-pre.12"
@@ -5665,6 +6167,14 @@
             "target": "Package",
             "version": "[1.7.0, )"
           },
+          "Microsoft.ML.ImageAnalytics": {
+            "target": "Package",
+            "version": "[1.7.0, )"
+          },
+          "Microsoft.ML.TensorFlow": {
+            "target": "Package",
+            "version": "[1.7.0, )"
+          },
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
             "version": "[16.11.0, )"
@@ -5680,6 +6190,10 @@
           "NUnit3TestAdapter": {
             "target": "Package",
             "version": "[4.0.0, )"
+          },
+          "SciSharp.TensorFlow.Redist": {
+            "target": "Package",
+            "version": "[2.6.0, )"
           },
           "coverlet.collector": {
             "target": "Package",

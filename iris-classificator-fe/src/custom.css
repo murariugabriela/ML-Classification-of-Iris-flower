@@ -19,6 +19,7 @@ code {
 .css-16lloyr-MuiBottomNavigation-root {
     height: 70px !important;
     background-color: var(--navBarColor) !important;
+    justify-content: space-evenly !important;
 }
 
 .css-1ee5err-MuiButtonBase-root-MuiBottomNavigationAction-root {
@@ -27,10 +28,6 @@ code {
 
 .css-1ee5err-MuiButtonBase-root-MuiBottomNavigationAction-root.Mui-selected {
     color: #d4c6f1 !important;
-}
-
-.css-16lloyr-MuiBottomNavigation-root {
-    justify-content: space-evenly !important;
 }
 
 body {
