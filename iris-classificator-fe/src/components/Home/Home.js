@@ -51,6 +51,11 @@ export default function Home() {
     const [alertMessage, setAlertMessage] = React.useState("");
     const [alertSeverity, setAlertSeverity] = React.useState("success");
 
+    const setMessageResponse = (message, severity, open_alert) => {
+        setAlertMessage(message);
+        setAlertSeverity(severity);
+        setOpenAlert(open_alert);
+    }
     const handleSubmit = (e) => {
         e.preventDefault();
         const requestOptions = {
@@ -69,17 +74,13 @@ export default function Home() {
         fetch('http://localhost:5287/api/1.0/IrisClassification', requestOptions)
             .then(res => res.json())
             .then(data => {
-                setAlertMessage("Successful classification");
-                setAlertSeverity("success");
-                setOpenAlert(true);
+                setMessageResponse("Successful classification", "success", true)
                 console.log(data);
                 setResponse(data.message)
             })
             .catch(error => {
-                setAlertMessage("Something went wrong");
-                setAlertSeverity("error");
-                setOpenAlert(true);
-                console.log(error)
+                setMessageResponse("Something went wrong", "error", true)
+                console.log(error);
             });
     }
     const handleInputImage = (file) => {
@@ -99,34 +100,27 @@ export default function Home() {
                     if (res.ok) {
                         return res.json()
                     } else {
-                        setAlertMessage("Something went wrong");
-                        setAlertSeverity("error");
-                        setOpenAlert(true);
+                        setMessageResponse("Something went wrong", "error", true)
                     }
                 })
                 .then(data => {
                     console.log(data)
                     if(data) {
-                        setAlertMessage("Successful classification");
-                        setAlertSeverity("success");
-                        setOpenAlert(true);
+                        setMessageResponse("Successful classification", "success", true)
                         setResponse(data.message)
                     }
                     
                 })
                 .catch(error => {
-                    setAlertMessage("Something went wrong");
-                    setAlertSeverity("error");
-                    setOpenAlert(true);
-                    console.log(error)
+                    setMessageResponse("Something went wrong", "error", true)
                 });
         }
     }
 
     return (
-        <div style={{display: "flex", justifyContent: "space-between"}}>
+        <div id={"page_content"} style={{display: "flex", justifyContent: "space-between"}}>
             <div className={"elements_to_predict"} style={{
-                paddingLeft: "30px",
+                paddingLeft: "100px",
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
@@ -164,11 +158,14 @@ export default function Home() {
                     }} value={sepalH} step={0.1} max={8} aria-label="Default"
                             valueLabelDisplay="auto"/>
                     <br/>
-                    <button style={{height: "40px", width: "30%", backgroundColor: "#c5b2ec", border: "none"}}
+                    <button className={"send_button"} style={{height: "40px", width: "30%", backgroundColor: "#c5b2ec", border: "none"}}
                             onClick={handleSubmit}>
                         Send
                     </button>
                 </div>
+                <br/>
+                <br/>
+                <br/>
                 <div>
                     <form className={"image_form"}>
                         <div style={{display: "flex", flexDirection: "column"}}>
@@ -188,25 +185,23 @@ export default function Home() {
             <div className={"response"}>
                 <div style={{display: "flex", flexDirection: "column"}}>
                     <h3>Iris setosa</h3>
-                    <img id={"iris_setosa"} width={"45%"} style={{opacity: response === "setosa" && "100%"}}
+                    <img id={"iris_setosa"} width={"250px"} style={{opacity: response === "setosa" && "100%"}}
                          src={"/Iris_setosa.jpg"} alt={"Iris setosa"}/>
                 </div>
-                <br/>
-                <br/>
-                <div style={{display: "flex"}}>
+                {/*<div style={{display: "flex"}}>*/}
                     <div style={{display: "flex", flexDirection: "column"}}>
                         <h3>Iris virginica</h3>
-                        <img id={"iris_verginica"} width={"55%"}
+                        <img id={"iris_verginica"} width={"250px"}
                              style={{opacity: response === "virginica" && "100%"}} src={"/Iris_virginica.jpg"}
                              alt={"Iris virginica"}/>
                     </div>
                     <div style={{display: "flex", flexDirection: "column"}}>
                         <h3>Iris versicolor</h3>
-                        <img id="iris_versicolor" width={"90%"}
+                        <img id="iris_versicolor" width={"250px"}
                              style={{opacity: response === "versicolor" && "100%"}} src={"/Iris_Versicolor.jpg"}
                              alt={"Iris versicolor"}/>
                     </div>
-                </div>
+                {/*</div>*/}
             </div>
             <SnackbarComponent message={alertMessage} open={openAlert} setOpen={setOpenAlert} severity={alertSeverity}/>
         </div>

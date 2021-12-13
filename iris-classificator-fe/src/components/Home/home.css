@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: column;
     width: 50%;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
     align-content: center;
 }
@@ -30,6 +30,38 @@ input[type=file]::file-selector-button:hover {
     background-color: #8b7faf;
 }
 
+.send_button {
+    transition: 1s;
+}
+
+.send_button:hover {
+    background-color: #8b7faf !important;
+}
+
 [id^="iris"] {
     opacity: 40%;
+}
+
+@media only screen and (max-width: 767px) {
+    [id^="iris"] {
+        width: 100px;
+    }
+    
+    .response {
+        flex-direction: row;
+        padding: 3px;
+        width: 100%;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    #page_content{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    .elements_to_predict{
+        padding-left: 30px !important;
+        width: 80%;
+    }
 }

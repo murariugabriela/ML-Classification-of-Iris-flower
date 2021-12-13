@@ -106,7 +106,7 @@ export default function Contact() {
     return (
         <div className={"pageLayout"}>
             <h2>Contact</h2>
-            <div style={{
+            <div id={"page_content"} style={{
                 display: "flex",
                 justifyContent: "space-evenly",
                 width: "90%",
@@ -157,6 +157,7 @@ export default function Contact() {
                 </form>
                 <div>
                     <Tabs
+                        variant="scrollable"
                         value={value}
                         onChange={handleChange}
                         textColor="secondary"

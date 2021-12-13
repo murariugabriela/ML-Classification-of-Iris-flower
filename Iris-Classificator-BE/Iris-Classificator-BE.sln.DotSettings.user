@@ -1,14 +1,34 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/Highlighting/HighlightingSourceSnapshotLocation/@EntryValue">C:\Users\Gabi\AppData\Local\JetBrains\Rider2021.2\resharper-host\temp\Rider\vAny\CoverageData\_Iris-Classificator-BE.-848279738\Snapshot\snapshot.utdcvr</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=1b6d7d77_002D26bb_002D41e0_002D801e_002D2d71702c35aa/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from Solution" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Solution /&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=61ef35b7_002D7457_002D49c2_002Da6ae_002D5a610bffa3e8/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Given_Data_When_DataRepresentsFloatNumbers_Then_ClassifyFlower #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::74F5F893-0026-40AE-AC53-621913C94EFA::net6.0::IrisClassificator.Tests.Service.ClassificateFlowerCommandHandlerTests.Given_Data_When_DataRepresentsFloatNumbers_Then_ClassifyFlower&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=6509e2fc_002D2ec0_002D4c0e_002Da7da_002D463025b37bcb/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Session" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;Nothing /&gt;&#xD;
+  &lt;Solution /&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=82bcb6a9_002D2a40_002D485b_002Db5e6_002D692cf66b96a6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Given_ContactController_When_SendIsCalled_Then_ShouldReturnA_Message" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::74F5F893-0026-40AE-AC53-621913C94EFA::net6.0::IrisClassificator.Tests.API.v1.ContactControllerTests.Given_ContactController_When_SendIsCalled_Then_ShouldReturnA_Message&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f5c22142_002De290_002D41f8_002Dbc8c_002D280b253e6aa1/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Given_ContactController_When_SendIsCalled_Then_ShouldReturnA_Message #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=86ef221c_002D4937_002D44a1_002D8336_002D95de689ab836/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Given_Data_When_DataRepresentsFloatNumbers_Then_ClassifyFlower" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Solution /&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d61135f9_002D3d16_002D42e5_002Da375_002D1e2d33b8399e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Given_Data_When_DataRepresentsFloatNumbers_Then_ClassifyFlower #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;xUnit::74F5F893-0026-40AE-AC53-621913C94EFA::net6.0::IrisClassificator.Tests.API.v1.ContactControllerTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::74F5F893-0026-40AE-AC53-621913C94EFA::net6.0::IrisClassificator.Tests.Service.ClassificateFlowerCommandHandlerTests.Given_Data_When_DataRepresentsFloatNumbers_Then_ClassifyFlower&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d70a02e5_002Dc67d_002D4ddf_002Db8f7_002Dfd2fe51220ed/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Given_Data_When_DataRepresentsFloatNumbers_Then_ClassifyFlower #4" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::74F5F893-0026-40AE-AC53-621913C94EFA::net6.0::IrisClassificator.Tests.Service.ClassificateFlowerCommandHandlerTests.Given_Data_When_DataRepresentsFloatNumbers_Then_ClassifyFlower&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f5c22142_002De290_002D41f8_002Dbc8c_002D280b253e6aa1/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Given_ContactController_When_SendIsCalled_Then_ShouldReturnA_Message #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Solution /&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

@@ -1,0 +1,11 @@
+﻿/.scannerwork
+/.idea
+/.vs
+Iris-Classificator-BE/.scannerwork
+Iris-Classificator-BE/.sonarqube
+Iris-Classificator-BE/packages
+iris-classificator-fe/.scannerwork
+*.dll
+*.so 
+*.lib
+*.dylib

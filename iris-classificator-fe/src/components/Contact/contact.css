@@ -11,3 +11,20 @@
     display: flex;
     flex-direction: column;
 }
+
+@media only screen and (max-width: 767px) {
+    #page_content {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .css-viou3o-MuiAutocomplete-root {
+        width: 200px !important;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .css-viou3o-MuiAutocomplete-root {
+        width: 200px !important;
+    }
+}

@@ -89,14 +89,5 @@ namespace Application.Utils
                 $"Image: {Path.GetFileName(imageData.ImagePath)} predicted as: {prediction.PredictedLabelValue} with score: {prediction.Score.Max()} ");
             return prediction.PredictedLabelValue;
         }
-
-        // private static void DisplayResults(IEnumerable<ImagePrediction> imagePredictionData)
-        // {
-        //     foreach (ImagePrediction prediction in imagePredictionData)
-        //     {
-        //         Console.WriteLine(
-        //             $"Image: {Path.GetFileName(prediction.ImagePath)} predicted as: {prediction.PredictedLabelValue} with score: {prediction.Score.Max()} ");
-        //     }
-        // }
     }
 }

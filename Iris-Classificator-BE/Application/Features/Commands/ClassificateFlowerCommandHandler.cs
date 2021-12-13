@@ -16,7 +16,7 @@ namespace Application.Features.Commands
             irisData.PetalWidth = request.PetalWidth;
             irisData.SepalWidth = request.SepalWidth;
             irisData.SepalLength = request.SepalHeight;
-            
+
             return new Message(irisClassifier.Classify(irisData));
         }
     }

@@ -1,30 +1,44 @@
-﻿using System.Net;
-using System.Net.Mail;
-using Application.Features.Commands;
-using Application.Response;
-using MediatR;
+﻿using MediatR;
 using WebAPI.Controllers.v1;
 using FakeItEasy;
+using IrisClassificator.Tests.API.v1.email_helpers;
 using Xunit;
-using Moq;
+using Assert = NUnit.Framework.Assert;
 
 namespace IrisClassificator.Tests.API.v1
 {
+    //[TestFixture]
     public class ContactControllerTests
     {
-        private readonly ContactController controller;
-        private readonly IMediator mediator;
-        
+        private readonly ContactController _controller;
+        private readonly IMediator _mediator;
+
         public ContactControllerTests()
         {
-            mediator = A.Fake<IMediator>();
-            controller = new ContactController(mediator);
+            _mediator = A.Fake<IMediator>();
+            _controller = new ContactController(_mediator);
         }
+        //[Test]
         [Fact]
-        public async void Given_ContactController_When_SendIsCalled_Then_ShouldReturnA_Message()
+        public void Given_EmailAddress_When_AddressIsValid_Then_EmailShouldBeSent()
         {
-            await controller.Send(A<SendEmail>._);
-            A.CallTo(() => mediator.Send(A<IRequest<Message>>._, default)).MustHaveHappenedOnceExactly();
+            var fakeClient = new FakeSmtpClient();
+            var helper = new EmailHelper(fakeClient);
+
+            helper.SendSupportMail("gabriela.murariu@info.uaic.ro");
+
+            Assert.IsTrue(fakeClient.MailSent);
+        }
+        //[Test]
+        [Fact]
+        public void Given_EmailAddress_When_AddressIsInvalid_Then_EmailShouldNotBeSent()
+        {
+            var fakeClient = new FakeSmtpClient();
+            var helper = new EmailHelper(fakeClient);
+
+            helper.SendSupportMail("gabriela.murariuatinfo.uaic.ro");
+
+            Assert.IsFalse(fakeClient.MailSent);
         }
     }
 }
