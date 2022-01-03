@@ -72,15 +72,21 @@ export default function Home() {
             }),
         };
         fetch('http://localhost:5287/api/1.0/IrisClassification', requestOptions)
-            .then(res => res.json())
-            .then(data => {
-                setMessageResponse("Successful classification", "success", true)
-                console.log(data);
-                setResponse(data.message)
+            .then(res => {
+                if (res.ok) {
+                    return res.json().then(data => {
+                        setMessageResponse("Successful classification", "success", true)
+                        console.log(data);
+                        setResponse(data.message)
+                    });
+                } else {
+                    console.log(res.json());
+                    setMessageResponse("Bad request", "error", true)
+                }
             })
             .catch(error => {
                 setMessageResponse("Something went wrong", "error", true)
-                console.log(error);
+
             });
     }
     const handleInputImage = (file) => {
@@ -98,18 +104,17 @@ export default function Home() {
                 .then(res => {
                     console.log(res.ok)
                     if (res.ok) {
-                        return res.json()
+                        return res.json().then(data => {
+                            console.log(data)
+                            if (data) {
+                                setMessageResponse("Successful classification", "success", true)
+                                setResponse(data.message)
+                            }
+
+                        })
                     } else {
                         setMessageResponse("Something went wrong", "error", true)
                     }
-                })
-                .then(data => {
-                    console.log(data)
-                    if(data) {
-                        setMessageResponse("Successful classification", "success", true)
-                        setResponse(data.message)
-                    }
-                    
                 })
                 .catch(error => {
                     setMessageResponse("Something went wrong", "error", true)
@@ -158,7 +163,8 @@ export default function Home() {
                     }} value={sepalH} step={0.1} max={8} aria-label="Default"
                             valueLabelDisplay="auto"/>
                     <br/>
-                    <button className={"send_button"} style={{height: "40px", width: "30%", backgroundColor: "#c5b2ec", border: "none"}}
+                    <button className={"send_button"}
+                            style={{height: "40px", width: "30%", backgroundColor: "#c5b2ec", border: "none"}}
                             onClick={handleSubmit}>
                         Send
                     </button>
@@ -176,7 +182,7 @@ export default function Home() {
                             </label>
                             <input type={"file"} name={"predictImage"} id={"predictImage"} max={1}
                                    onChange={(e) => handleInputImage(e.target.files)}
-                                    // style={{height: "40px", width: "30%", backgroundColor: "#c5b2ec", border: "none"}}
+                                // style={{height: "40px", width: "30%", backgroundColor: "#c5b2ec", border: "none"}}
                             />
                         </div>
                     </form>
@@ -189,18 +195,18 @@ export default function Home() {
                          src={"/Iris_setosa.jpg"} alt={"Iris setosa"}/>
                 </div>
                 {/*<div style={{display: "flex"}}>*/}
-                    <div style={{display: "flex", flexDirection: "column"}}>
-                        <h3>Iris virginica</h3>
-                        <img id={"iris_verginica"} width={"250px"}
-                             style={{opacity: response === "virginica" && "100%"}} src={"/Iris_virginica.jpg"}
-                             alt={"Iris virginica"}/>
-                    </div>
-                    <div style={{display: "flex", flexDirection: "column"}}>
-                        <h3>Iris versicolor</h3>
-                        <img id="iris_versicolor" width={"250px"}
-                             style={{opacity: response === "versicolor" && "100%"}} src={"/Iris_Versicolor.jpg"}
-                             alt={"Iris versicolor"}/>
-                    </div>
+                <div style={{display: "flex", flexDirection: "column"}}>
+                    <h3>Iris virginica</h3>
+                    <img id={"iris_verginica"} width={"250px"}
+                         style={{opacity: response === "virginica" && "100%"}} src={"/Iris_virginica.jpg"}
+                         alt={"Iris virginica"}/>
+                </div>
+                <div style={{display: "flex", flexDirection: "column"}}>
+                    <h3>Iris versicolor</h3>
+                    <img id="iris_versicolor" width={"250px"}
+                         style={{opacity: response === "versicolor" && "100%"}} src={"/Iris_Versicolor.jpg"}
+                         alt={"Iris versicolor"}/>
+                </div>
                 {/*</div>*/}
             </div>
             <SnackbarComponent message={alertMessage} open={openAlert} setOpen={setOpenAlert} severity={alertSeverity}/>

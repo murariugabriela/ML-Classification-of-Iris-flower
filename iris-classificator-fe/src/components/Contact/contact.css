@@ -7,6 +7,12 @@
     align-content: center;
 }
 
+.contact_info {
+    padding: 10px;
+    background-color: #d4c6f1;
+    opacity: 70%;
+}
+
 .contactForm{
     display: flex;
     flex-direction: column;

@@ -144,3 +144,10 @@ C:\Users\Gabi\Desktop\ML-Classification-of-Iris-flower\Iris-Classificator-BE\Web
 C:\Users\Gabi\Desktop\ML-Classification-of-Iris-flower\Iris-Classificator-BE\WebAPI\bin\Debug\net6.0\runtimes\osx-x64\native\libtensorflow.dylib
 C:\Users\Gabi\Desktop\ML-Classification-of-Iris-flower\Iris-Classificator-BE\WebAPI\bin\Debug\net6.0\runtimes\osx-x64\native\libtensorflow_framework.2.dylib
 C:\Users\Gabi\Desktop\ML-Classification-of-Iris-flower\Iris-Classificator-BE\WebAPI\bin\Debug\net6.0\runtimes\win-x64\native\tensorflow.dll
+C:\Users\Gabi\Desktop\ML-Classification-of-Iris-flower\Iris-Classificator-BE\WebAPI\bin\Debug\net6.0\System.Web.Mvc.dll
+C:\Users\Gabi\Desktop\ML-Classification-of-Iris-flower\Iris-Classificator-BE\WebAPI\bin\Debug\net6.0\System.Web.Razor.dll
+C:\Users\Gabi\Desktop\ML-Classification-of-Iris-flower\Iris-Classificator-BE\WebAPI\bin\Debug\net6.0\System.Web.Helpers.dll
+C:\Users\Gabi\Desktop\ML-Classification-of-Iris-flower\Iris-Classificator-BE\WebAPI\bin\Debug\net6.0\System.Web.WebPages.Deployment.dll
+C:\Users\Gabi\Desktop\ML-Classification-of-Iris-flower\Iris-Classificator-BE\WebAPI\bin\Debug\net6.0\System.Web.WebPages.Razor.dll
+C:\Users\Gabi\Desktop\ML-Classification-of-Iris-flower\Iris-Classificator-BE\WebAPI\bin\Debug\net6.0\System.Web.WebPages.dll
+C:\Users\Gabi\Desktop\ML-Classification-of-Iris-flower\Iris-Classificator-BE\WebAPI\bin\Debug\net6.0\Microsoft.Web.Infrastructure.dll

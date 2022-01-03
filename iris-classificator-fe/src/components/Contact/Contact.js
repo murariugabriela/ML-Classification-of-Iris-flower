@@ -80,17 +80,17 @@ export default function Contact() {
                     console.log(error);
                 });
         } else {
-            
-            if(senderEmail === ""){
+
+            if (senderEmail === "") {
                 document.getElementById("fromMessage").textContent = "You should enter a valid email";
             }
-            if(client === ""){
+            if (client === "") {
                 document.getElementById("nameMessage").textContent = "This field should not be empty";
             }
-            if(messageBody === ""){
+            if (messageBody === "") {
                 document.getElementById("messageMessage").textContent = "This field should not be empty";
             }
-            if(email === ""){
+            if (email === "") {
                 setOpenAlert(true)
                 setAlertSeverity("error")
                 setAlertMessage("You should choose an email to send to")
@@ -164,24 +164,44 @@ export default function Contact() {
                         indicatorColor="secondary"
                         aria-label="secondary tabs example"
                     >
-                        <Tab icon={<Avatar alt={"Alex"} src={"Picture2.png"}/>} value="1"
+                        <Tab icon={<Avatar alt={"Alex"} src={"dobos_alexandru.jpg"}/>} value="1"
                              label="Doboș Alexandru-Cristian"/>
-                        <Tab icon={<Avatar alt={"Alex"} src={"Picture2.png"}/>} value="2" label="Murariu Gabriela"/>
-                        <Tab icon={<Avatar alt={"Alex"} src={"Picture2.png"}/>} value="3" label="Ursachi Gabriela"/>
-                        <Tab icon={<Avatar alt={"Alex"} src={"Picture2.png"}/>} value="4" label="Zet Teodor"/>
+                        <Tab icon={<Avatar alt={"Alex"} src={"murariu_gabriela.png"}/>} value="2"
+                             label="Murariu Gabriela"/>
+                        <Tab icon={<Avatar alt={"Alex"} src={"ursachi_gabriela.jpeg"}/>} value="3"
+                             label="Ursachi Gabriela"/>
+                        <Tab icon={<Avatar alt={"Alex"} src={"zet_teodor.jpg"}/>} value="4" label="Zet Teodor"/>
                     </Tabs>
-                    <TabPanel value={value} index={"1"}>
-                        cristian.dobos@info.uaic.ro
-                    </TabPanel>
-                    <TabPanel value={value} index={"2"}>
-                        gabriela.murariu@info.uaic.ro
-                    </TabPanel>
-                    <TabPanel value={value} index={"3"}>
-                        gabriela.ursachi@info.uaic.ro
-                    </TabPanel>
-                    <TabPanel value={value} index={"4"}>
-                        teodor.zet@info.uaic.ro
-                    </TabPanel>
+                    <div className={"contact_info"}>
+                        <TabPanel value={value} index={"1"}>
+                            {/*<div className={"contact_info"}>*/}
+                            Student at Faculty of Computer Science, Jassy
+                            <br/>
+                            Email: cristian.dobos@info.uaic.ro
+                            {/*</div>*/}
+                        </TabPanel>
+                        <TabPanel value={value} index={"2"}>
+                            {/*<div className={"contact_info"}>*/}
+                            Student at Faculty of Computer Science, Jassy
+                            <br/>
+                            Email: gabriela.murariu@info.uaic.ro
+                            {/*</div>*/}
+                        </TabPanel>
+                        <TabPanel value={value} index={"3"}>
+                            {/*<div className={"contact_info"}>*/}
+                            Student at Faculty of Computer Science, Jassy
+                            <br/>
+                            Email: gabriela.ursachi@info.uaic.ro
+                            {/*</div>*/}
+                        </TabPanel>
+                        <TabPanel value={value} index={"4"}>
+
+                            Student at Faculty of Computer Science, Jassy
+                            <br/>
+                            Email: teodor.zet@info.uaic.ro
+
+                        </TabPanel>
+                    </div>
                 </div>
             </div>
             <SnackbarComponent message={alertMessage} open={openAlert} setOpen={setOpenAlert} severity={alertSeverity}/>
